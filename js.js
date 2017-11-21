@@ -1,18 +1,7 @@
 $(document).ready(function () {
 
-    var reg = /^[0-9A-Za-z]+$/
-    $('#sbmt').click(function () {
-        if (reg.test($('#txt1').val()) && reg.test($('#txt2').val())) {
-            var log = $('#txt1').val();
-            var pass = $('#txt2').val();
-            $('.authorization').slideUp(1000);
-            $('.main').delay(1500).slideDown('2000');
-            mainFunc();
 
-        }
-    });
-
-    (function mainFunc() {
+    function mainFunc() {
         var count = 0;
         var boxes = $('.listBox').length;
 
@@ -159,6 +148,8 @@ $(document).ready(function () {
                 break;
             }
         });
-    })();
+    };
+
+    mainFunc();
 
 });
